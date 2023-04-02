@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home 1</title>
+    <link rel = "icon"  href="/static/AVM-Logo.png"
+        type = "image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <style>
+         .yo{
+            /* background-color: rgb(236, 240, 24); */
+            color:black;
+            
+        }
+        .container1{
+            font-size:xx-large;
+            text-align: center;
+            bottom: 0%;
+            font-size: 50px;
+        }
+        nav{
+        height: 75px;
+        font-size:x-large;
+        text-decoration-color: white;
+        color: white;
+      }
+      </style>
+     
+</head>
+<body >
+   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+    <!-- Welcome {{request.user}}
+    <a href="/avm/logout" class="btn btn-primary">Logout</a> -->
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/avm/customer">
+                <img src="/static/AVM-Logo.png" alt="Bootstrap" height="74">
+              </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/avm/customer">Home</a>
+              </li>
+              
+              
+              <li class="nav-item">
+                <a class="nav-link" href="/avm/customer/contact">Contact us</a>
+              </li>
+             
+            </ul>
+            <b >{{request.user}}</b>&nbsp;&nbsp;
+            
+            <button type="button" onclick="window.location.href='/avm/logout';" class="btn btn-secondary">Logout</button>
+          </div>
+        </div>
+      </nav>
+      {% if messages %}
+      {% for message in messages %}
+      <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+      <b>{{ message }}</b>
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+      {%endfor%}
+      {% endif %}
+      <div class="yo">
+        <div class="container1">
+    
+        <img src="/static/AVM-Logo.png " height="200"/>
+        <br>
+        <b>Home 1</b>
+        </div>
+    </div>
+      <br>
+      <div class="container text-center">
+        <div class="row">
+          <div class="col">
+            <!-- <b>Master Bed Room</b> -->
+            <img src="/static/b3.jpg" height="200px">
+            <label>Master bed room</label>
+          </div>
+          
+          <div class="col">
+            <!-- <b>Bathroom</b> -->
+            <img src="/static/bt3.jpg" height="200px">
+            <label>Bathroom</label>
+          </div>
+
+          <div class="col">
+            <!-- <b>Kitchen</b> -->
+            <img src="/static/k3.jpg" height="200px">
+            <label>Kitchen</label>
+          </div>
+        </div>
+      </div><br><br>
+      <b>About our home</b><br>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam quos sunt fugiat in itaque beatae! Magnam vero dignissimos ex, nulla adipisci harum corrupti impedit provident modi accusantium dicta natus non consectetur. Ipsa quidem repellat necessitatibus sit blanditiis odio praesentium non qui recusandae hic rem distinctio laboriosam at, numquam vitae sapiente ab? Dicta amet laboriosam iusto vero temporibus itaque aperiam optio numquam, adipisci error officia, delectus ut. Sapiente maiores, nesciunt deserunt perspiciatis quibusdam et? Dignissimos facere, explicabo, harum impedit doloremque animi eius veritatis aperiam labore quae ratione placeat rerum. Aliquam neque libero deleniti optio fuga facere earum, id odit similique incidunt.</p>
+      <a href="/avm/customer/pay">
+        <button type="button">Purchase</button>
+      </a>
+</body>
+</html>

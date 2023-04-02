@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>
+        AVM Contact Us
+    </title>
+    <link rel = "icon" href="/static/AVM-Logo.png"
+        type = "image/x-icon">
+    <style>
+        
+        .yo{
+            /* background-color: rgb(236, 240, 24); */
+            color:black;
+            
+        }
+        .container1{
+            font-size:xx-large;
+            text-align: center;
+            bottom: 0%;
+            font-size: 50px;
+        }
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+{% include 'navbar.html' %}
+{%block body%}
+{%endblock body%}
+
+
+<!-- <ul class="messages">
+    
+    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}></li>
+    
+</ul> -->
+
+
+<body style="background-color: rgb(236, 240, 24);">
+    <div class="yo">
+        <div class="container1">
+    
+        <img src="/static/AVM-Logo.png " height="250"/>
+        <br>
+        <b>CONTACT US</b>
+        </div>
+    </div>
+    <div class="container py-4">
+        <form method="post" action="/avm/contact">
+            {% csrf_token %}
+            <!-- <input type="text" name='f_name' placeholder="Enter your name"/> -->
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" name="f_name"placeholder="Linus Torvalds" >
+              </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="email" name="f_email" placeholder="name@example.com">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Phone Number</label>
+                <input type="number" class="form-control" id="phone" name="f_phone" placeholder="+91-xxxxxxxxxx">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Tell us what you want to contact us for?</label>
+                <textarea class="form-control" id="query" name="f_query" rows="3"></textarea>
+            </div>
+                <br>
+            <button class="btn btn-primary" type="submit">Submit</button>
+        </form>
+        
+    </div>
+    <!-- <p>Our Promise : We will not spam you </p> -->
+</body>
+</html>
