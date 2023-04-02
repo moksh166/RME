@@ -23,5 +23,6 @@
     "src": "/(.*)",
     "dest": "devntechno/wsgi.py"
     }
-    ]
+    ],
+     "rewrites": [{ "source": "/(.*)", "destination": "/api" }]
     }
